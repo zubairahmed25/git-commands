@@ -7,12 +7,12 @@ then
   git stash --include-untracked
   git stash apply
   git add .
-  git commit -m "hello 2"
+  git commit -m "hello 22"
   git push
   git checkout $newBranch
   git stash apply
   git add .
-  git commit -m "hello 2"
+  git commit -m "hello 22"
   git push
 else
   echo "Branch name is not specified"
