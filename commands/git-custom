@@ -9,7 +9,7 @@ then
   git add .
   git commit -m "hello 2"
   git push
-  git checkout -b $newBranch
+  git checkout $newBranch
   git stash apply
   git add .
   git commit -m "hello 2"
