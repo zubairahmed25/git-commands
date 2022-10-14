@@ -1,0 +1,27 @@
+#!/bin/sh
+
+newBranch=$1
+
+if [ ! -z "$1" ]
+then
+  git stash --include-untracked
+  git stash apply
+  git add .
+  git commit -m "hello 2"
+  git checkout -b $newBranch
+  git stash apply
+  git add .
+  git commit -m "hello 2"
+else
+  echo "Branch name is not specified"
+fi
+
+# twoBranch=$2
+
+# if [ ! -z "$2" ]
+# then
+#   git checkout -b $twoBranch
+#   git stash apply
+# else
+#   echo "Branch name 2 is not specified"
+# fi
